@@ -1,0 +1,38 @@
+.header-container{
+    font-family: 'Nunito Sans', sans-serif;
+    display: flex;
+    justify-content: center;
+    height: 70px;
+    box-shadow: 0 1px 10px 0 #d6d5d5;
+    margin-bottom: 3em;
+}
+
+.header-wrapper{
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.header-wrapper h1{
+    font-size: 1.5rem;
+}
+
+.mode{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .5em;
+    cursor: pointer;
+}
+
+.moon{
+    font-weight: 300;
+    font-size: 1rem;
+    transform: rotate(-29deg);
+}
+
+.mode span{
+    font-weight: 600;
+}

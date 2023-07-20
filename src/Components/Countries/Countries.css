@@ -1,0 +1,17 @@
+.countries-container{
+    font-family: 'Nunito Sans', sans-serif;
+    display: flex;
+    justify-content: center;
+}
+
+.country-wrapper{
+    width: 90%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    grid-gap: 2em;
+}
+
+.callback-wrapper img{
+    width: 70%;
+}
