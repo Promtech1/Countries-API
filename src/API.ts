@@ -1,4 +1,3 @@
-
 export type Countries1 = {
     name: {[key: string]: string};
     population: number;
@@ -11,7 +10,6 @@ export type Countries1 = {
     languagies: string;
     borders: string[];
 }
-
 
 
 

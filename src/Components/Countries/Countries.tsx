@@ -28,10 +28,10 @@ const Countries:React.FC<Props> = ({
                     <div className="callback-wrapper">
                         <img src={CountryData.flags.png} alt="" className='flag'/>
                         <div className="detail">
-                            <span className="name">{CountryData.name.common}</span>
-                            <p className="population">{CountryData.population}</p>
-                            <p className="region">{CountryData.region}</p>
-                            <p className="capital">{CountryData.capital}</p>
+                            <p className="name">{CountryData.name.common}</p>
+                            <p className="population"><span className='title-bold'>Population:</span> {CountryData.population}</p>
+                            <p className="region"><span className='title-bold'>Region:</span> {CountryData.region}</p>
+                            <p className="capital"><span className='title-bold'>Capital:</span> {CountryData.capital}</p>
                         </div>
                     </div>
                 </div>
