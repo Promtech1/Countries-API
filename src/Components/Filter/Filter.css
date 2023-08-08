@@ -1,6 +1,7 @@
 .filter-container{
     display: flex;
     justify-content: center;
+    flex-direction: column;
     font-family: 'Nunito Sans', sans-serif;
     margin-bottom: 3em;
 }
@@ -9,6 +10,7 @@
     display: flex;
     justify-content: space-between;
     width: 90%;
+    margin: 0 auto;
 }
 
 .search{

@@ -1,12 +1,14 @@
 import React from 'react'
 import './Countries.css'
 
+
 type Props = {
     // cFlag: string;
     // cName: string;
     // cPopulation: number;
     // cRegion: string;
     callbacks: CountryData[];
+    search: string;
 }
 
 type CountryData = {
@@ -18,12 +20,36 @@ type CountryData = {
 };
 
 const Countries:React.FC<Props> = ({
-    callbacks
+    callbacks,
+    search
 }) => {
+
+    const searchWords = search.toLowerCase().split(' ');
+    console.log("love:", searchWords)
+
+    const filterByWords = (data: CountryData[], words: string[]): CountryData[] => {
+        let filteredData = [...data];
+
+        for (const word of words) {
+            filteredData = filteredData.filter((CountryData) => {
+                const commonName = CountryData.name.common.toLowerCase();
+                return commonName.startsWith(word);
+            });
+
+            if (filteredData.length === 0) {
+                break;
+            }
+        }
+        return filteredData;
+    };
+
+    const filteredCallbacks = filterByWords(callbacks, searchWords);
+
   return (
     <div className="countries-container">
+        
         <div className="country-wrapper">
-            {callbacks.map((CountryData, index) => (
+            {filteredCallbacks.map((CountryData, index) => (
                 <div className="callback-container" key={index}>
                     <div className="callback-wrapper">
                         <img src={CountryData.flags.png} alt="" className='flag'/>
