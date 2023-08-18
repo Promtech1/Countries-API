@@ -1,4 +1,5 @@
-import {GoSearch} from 'react-icons/Go'
+
+import {FaSearch} from 'react-icons/fa'
 import {useState, useEffect} from 'react'
 
 import './Filter.css'
@@ -53,7 +54,7 @@ const Filter = () => {
     <div className="filter-container">
         <div className="filter-wrapper">
             <div className="search">
-                <GoSearch className="icon-search"/>
+                <FaSearch className="icon-search"/>
                 <input type="search" placeholder="Search for a country..." className='main-search' onChange={(e) => setSearch(e.target.value)}/>
             </div> 
 
