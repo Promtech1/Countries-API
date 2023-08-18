@@ -1,0 +1,50 @@
+.dark {
+/* Add your dark mode styles here */
+    background-color: rgb(32, 44, 55) !important;
+    color: white;
+    min-height: 100vh;
+    padding-bottom: 2em;
+}
+  
+  /* Light Mode Styles */
+.light {
+    /* Add your light mode styles here */
+    background-color: white;
+    color: #333;
+    padding-bottom: 2em;
+}
+
+.dark .header-container{
+    background-color: rgb(43, 55, 67);
+    box-shadow: unset;
+}
+
+.dark .country-wrapper a{
+    color: white;
+}
+
+.dark .callback-container{
+    box-shadow: unset;
+    background-color: rgb(43, 55, 67);
+}
+
+.dark .main-search{
+    background-color: rgb(43, 55, 67);
+    color: white;
+    box-shadow: unset;
+}
+
+.dark .region select{
+    background-color: rgb(43, 55, 67);
+    color: white;
+    box-shadow: unset;
+}
+
+.dark .back{
+    background-color: rgb(43, 55, 67);
+    color: white;
+}
+
+.dark .border-main span{
+    background-color: rgb(43, 55, 67);
+}

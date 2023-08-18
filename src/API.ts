@@ -1,13 +1,31 @@
+export type Currency = {
+    name: string;
+    symbol: string;
+};
+
+export type LanguageCommon = {
+    common: string;
+    official: string;
+};
+
+export type NativeName = {
+    [languageCode: string]: LanguageCommon;
+};
+
 export type Countries1 = {
-    name: {[key: string]: string};
+    name: {
+        common: string;
+        official: string;
+        nativeName: NativeName;
+    } ;
     population: number;
     region: string;
     capital: string[]
     flags: { [key: string] :string};
     subregion: string;
     tld: string[];
-    currencies: string;
-    languagies: string;
+    currencies: { [key: string]: Currency };
+    languages: string[];
     borders: string[];
 }
 
@@ -20,7 +38,6 @@ export const fetchCountries = async() => {
         ...country
     }));
 
-    // console.log(modifiedData)
     return modifiedData
     // return data.map((country: Countries) => ({
     //     country

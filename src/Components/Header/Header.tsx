@@ -1,13 +1,18 @@
 import {FaRegMoon} from 'react-icons/fa'
 import './Header.css'
 
-const Header = () => {
+
+interface HeaderProps {
+  toggleTheme: () => void;
+}
+
+const Header = ({ toggleTheme }: HeaderProps) => {
   return (
     <div className="header-container">
         <div className="header-wrapper">
             <h1>Where in the world?</h1>
 
-            <div className="mode">
+            <div className="mode" onClick={toggleTheme}>
                 <FaRegMoon className="moon"/>
                 <span>Dark mode</span>
             </div>
@@ -15,5 +20,7 @@ const Header = () => {
     </div>
   )
 }
+
+
 
 export default Header

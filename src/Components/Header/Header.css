@@ -1,3 +1,9 @@
+/* body{
+    background-color: black;
+    color: white;
+} */
+
+
 .header-container{
     font-family: 'Nunito Sans', sans-serif;
     display: flex;
@@ -5,6 +11,10 @@
     height: 70px;
     box-shadow: 0 1px 10px 0 #d6d5d5;
     margin-bottom: 3em;
+}
+
+.dark.header-container{
+    background-color: aqua !important;
 }
 
 .header-wrapper{
@@ -35,4 +45,10 @@
 
 .mode span{
     font-weight: 600;
+}
+
+@media screen and (max-width: 434px){
+    .header-wrapper h1{
+        font-size: 1rem;
+    }
 }

@@ -12,6 +12,8 @@ import { Countries1 } from '../../API';
 
 const Filter = () => {
     const [search, setSearch] = useState('');
+    const [select, setSelect] = useState('');
+
 
     const [countries, setCountries] = useState<Countries1[]>([])
     const [sortData, setSortData] = useState<Countries1[]>([])
@@ -20,7 +22,6 @@ const Filter = () => {
         const callCountries = async() => {
           const newCountries = await fetchCountries();
           setCountries(newCountries)
-          
         };
     
         callCountries()
@@ -40,12 +41,12 @@ const Filter = () => {
     
     
         sortDataAlphabetically();
-      }, [countries]);
+    }, [countries]);
     
     
-      useEffect(() => {
-        // console.log(sortData); // Updated state value
-      }, [sortData]);
+    useEffect(() => {
+        console.log(sortData); // Updated state value
+    }, [sortData]);
     
 
   return (
@@ -57,9 +58,9 @@ const Filter = () => {
             </div> 
 
             <div className="region">
-                <select >
+                <select onChange={(e) => setSelect((e.target as HTMLSelectElement).value)}>
                     {/* <option value="All" disabled>Filter By Region</option> */}
-                    <option selected disabled>Filter By Region</option>
+                    <option value="All">Filter By Region / All</option>
                     <option value="Africa">Africa</option>
                     <option value="Americas">America</option>
                     <option value="Asia">Asia</option>
@@ -72,6 +73,7 @@ const Filter = () => {
         <Countries 
             callbacks={sortData}
             search={search}
+            selectt={select}
         />
     </div>
   )
